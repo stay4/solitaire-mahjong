@@ -88,10 +88,11 @@ export default class Stackable extends Phaser.GameObjects.Container {
         const y = other.y;
         const hw = this.width/2;
         const hh = this.height/2;
-        const l = this.x - hw;
-        const r = this.x + hw;
-        const t = this.y - hh;
-        const b = this.y + hh;
+        const m = 30;
+        const l = this.x - hw - m;
+        const r = this.x + hw + m;
+        const t = this.y - hh - m;
+        const b = this.y + hh + m;
 
         return (x > l) && (x < r) && (y > t) && (y < b);
     }
