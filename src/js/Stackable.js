@@ -6,6 +6,7 @@ export default class Stackable extends Phaser.GameObjects.Container {
 
         scene.add.existing(this);
 
+        this._tmpPos = { x: 0, y: 0 };
         this._child = null;
         this._parent = null;
     }

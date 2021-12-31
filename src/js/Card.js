@@ -16,8 +16,6 @@ export default class Card extends Stackable {
 
         this._sprite = scene.add.sprite(0, 0, 'spritesheet', this.getImageKey(suit, number));
         this.add(this._sprite);
-
-        this._tmpPos = { x: 0, y: 0 };
     }
 
     static get SuitDragons() { return 0; }
