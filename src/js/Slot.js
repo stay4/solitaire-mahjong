@@ -80,7 +80,7 @@ export class DestSlot extends SlotBase {
             return false;
         }
 
-        terminal.stack(target);
+        terminal.stack(target, -1.0);
 
         return true;
     }

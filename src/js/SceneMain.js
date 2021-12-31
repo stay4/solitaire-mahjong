@@ -345,7 +345,8 @@ export default class SceneMain extends Phaser.Scene {
             }
 
             if (target.number === collectableNum) {
-                this._destSlots[target.suit-1].getLastDescendant().stack(target, 0.0, movingInfo);
+                const slot = this._destSlots[target.suit-1];
+                slot.getLastDescendant().stack(target, slot.isTerminal() ? 0.0 : -1.0, movingInfo);
 
                 break;
             }
